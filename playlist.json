@@ -1,85 +1,41 @@
 {
-    "playlist_info": {
-        "name": "LiveSportsPlay Premium Playlist",
-        "telegram": "https://t.me/livesportsplay",
-        "owner": "TVBD",
-        "last_update_time": "2:45:00 PM 21-04-2026"
-    },
-    "channels": [
+  "settings": {
+    "notice": "Welcome To TVBD Sports | Live Football & Cricket"
+  },
+
+  "matches": {
+    "1": {
+      "id": "1",
+      "leagueTitle": "UEFA Champions League",
+      "team1Name": "Real Madrid",
+      "team1Logo": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
+      "team2Name": "Barcelona",
+      "team2Logo": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
+      "matchTime": "2026-04-21T22:00:00",
+      "matchEndTime": "2026-04-22T00:00:00",
+      "streamLinks": [
         {
-            "Category": "LIVE EVENT",
-            "League": "Intro",
-            "Team 1 Name": "LiveSports",
-            "Team 2 Name": "Play",
-            "Team 1 Logo": "https://github.com/srhady/Hady/raw/refs/heads/main/1773124095740.png",
-            "Team 2 Logo": "https://github.com/srhady/Hady/raw/refs/heads/main/1773124095740.png",
-            "Match Title": "Intro | Welcome to LiveSportsPlay",
-            "Match Poster": "https://github.com/srhady/Hady/raw/refs/heads/main/1773124095740.png",
-            "Match Status": "Live",
-            "Start Time": "Always",
-            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36",
-            "Referer": "https://api2.ifnewgen.xyz/",
-            "Stream URL": "https://github.com/srhady/Hady/raw/refs/heads/main/video_20260310_131739_edit.mp4"
-        },
-        {
-            "Category": "Baseball",
-            "League": "NPB",
-            "Team 1 Name": "YOKOHAMA",
-            "Team 2 Name": "Hanshin Tigers",
-            "Team 1 Logo": "https://static-live.linewgen.xyz/live/bing/img/teams/e3e7ae8a15936419522e36aac0f7faea.png",
-            "Team 2 Logo": "https://static-live.linewgen.xyz/live/bing/img/teams/5a915504baf84e88cbc763dfcfc934cf.png",
-            "Match Title": "YOKOHAMA DeNA BAYSTARS VS Hanshin Tigers | NPB",
-            "Match Poster": "",
-            "Match Status": "Live",
-            "Start Time": "2:45 PM 21-04-2026",
-            "User-Agent": "Mozilla/5.0",
-            "Referer": "https://api2.ifnewgen.xyz/",
-            "Stream URL": "https://livecdn-bp-iptv.linewgen.xyz/live_abr/239_hd/index.m3u8"
-        },
-        {
-            "Category": "Football",
-            "League": "K League 1",
-            "Team 1 Name": "Jeonbuk Motors",
-            "Team 2 Name": "Incheon United",
-            "Team 1 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/2762.png",
-            "Team 2 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/2763.png",
-            "Match Title": "Jeonbuk Motors VS Incheon United | K League 1",
-            "Match Poster": "",
-            "Match Status": "Upcoming",
-            "Start Time": "4:30 PM 21-04-2026",
-            "User-Agent": "Mozilla/5.0",
-            "Referer": "https://api2.ifnewgen.xyz/",
-            "Stream URL": ""
-        },
-        {
-            "Category": "Cycling",
-            "League": "UCI Pro Series",
-            "Team 1 Name": "Tour of Alps",
-            "Team 2 Name": "Stage 2",
-            "Team 1 Logo": "",
-            "Team 2 Logo": "",
-            "Match Title": "Tour of the Alps, Stage 2 | UCI Pro Series",
-            "Match Poster": "",
-            "Match Status": "Upcoming",
-            "Start Time": "5:30 PM 21-04-2026",
-            "User-Agent": "Mozilla/5.0",
-            "Referer": "https://api2.ifnewgen.xyz/",
-            "Stream URL": ""
-        },
-        {
-            "Category": "Football",
-            "League": "La Liga",
-            "Team 1 Name": "Mallorca",
-            "Team 2 Name": "Valencia",
-            "Team 1 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/798.png",
-            "Team 2 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/532.png",
-            "Match Title": "Mallorca VS Valencia | La Liga",
-            "Match Poster": "",
-            "Match Status": "Upcoming",
-            "Start Time": "11:00 PM 21-04-2026",
-            "User-Agent": "Mozilla/5.0",
-            "Referer": "https://api2.ifnewgen.xyz/",
-            "Stream URL": ""
+          "name": "HD Server",
+          "link": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
         }
-    ]
+      ]
+    },
+
+    "2": {
+      "id": "2",
+      "leagueTitle": "IPL T20",
+      "team1Name": "CSK",
+      "team1Logo": "https://upload.wikimedia.org/wikipedia/en/2/2e/Chennai_Super_Kings_Logo.svg",
+      "team2Name": "MI",
+      "team2Logo": "https://upload.wikimedia.org/wikipedia/en/c/cd/Mumbai_Indians_Logo.svg",
+      "matchTime": "2026-04-22T18:00:00",
+      "matchEndTime": "2026-04-22T22:00:00",
+      "streamLinks": [
+        {
+          "name": "Server 1",
+          "link": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+        }
+      ]
+    }
+  }
 }
