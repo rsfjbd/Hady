@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Streaming - Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background: #000; margin: 0; overflow: hidden; }
+        #player { width: 100vw; height: 100vh; }
+    </style>
+</head>
+<body>
+
+    <div class="fixed top-0 left-0 w-full z-50 p-4 flex items-center gap-4 bg-gradient-to-b from-black/80 to-transparent">
+        <button onclick="history.back()" class="text-white text-xl"><i class="fas fa-arrow-left"></i></button>
+        <div class="text-white">
+            <h1 id="match-title" class="text-sm font-bold truncate">Live Stream</h1>
+            <p class="text-rose-500 text-[10px] uppercase font-black tracking-widest animate-pulse">● Live Now</p>
+        </div>
+    </div>
+
+    <div id="player"></div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const streamUrl = urlParams.get('url');
+        const matchTitle = urlParams.get('title');
+
+        if (matchTitle) document.getElementById('match-title').innerText = matchTitle;
+
+        const art = new Artplayer({
+            container: '#player',
+            url: streamUrl,
+            autoplay: true,
+            fullscreen: true,
+            fullscreenWeb: true,
+            pip: true,
+            setting: true,
+            theme: '#e11d48',
+            customType: {
+                m3u8: function(video, url) {
+                    if (Hls.isSupported()) {
+                        const hls = new Hls();
+                        hls.loadSource(url);
+                        hls.attachMedia(video);
+                    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+                        video.src = url;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
