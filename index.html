@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title>LiveSports Pro v3.3</title>
+    <title>LiveSports Pro V3.5</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -18,81 +18,37 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; -webkit-tap-highlight-color: transparent; }
         
-        body { 
-            background-color: var(--bg-dark); 
-            color: #fff; 
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-        }
+        body { background-color: var(--bg-dark); color: #fff; min-height: 100vh; display: flex; justify-content: center; }
 
         .app-container {
             width: 100%;
             max-width: 480px;
             background: var(--bg-dark);
             min-height: 100vh;
-            position: relative;
-            padding-bottom: 40px;
+            padding-bottom: 30px;
         }
 
         /* Header */
         header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            position: sticky; top: 0; z-index: 100;
             padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: rgba(5, 8, 16, 0.95);
-            backdrop-filter: blur(10px);
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(5, 8, 16, 0.98);
             border-bottom: 1px solid var(--border);
         }
-        .logo { font-size: 20px; font-weight: 800; color: #fff; text-decoration: none; }
+        .logo { font-size: 20px; font-weight: 800; color: #fff; text-decoration: none; text-transform: uppercase; }
         .logo span { color: var(--accent); }
-        .status { font-size: 10px; font-weight: 700; color: #10b981; display: flex; align-items: center; gap: 5px; }
+        .status { font-size: 11px; color: #10b981; font-weight: 600; }
 
         /* Tabs */
-        .tab-box {
-            display: flex;
-            margin: 20px;
-            background: #000;
-            padding: 5px;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-        .tab {
-            flex: 1;
-            text-align: center;
-            padding: 10px;
-            font-size: 13px;
-            font-weight: 600;
-            color: var(--text-gray);
-            border-radius: 8px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
+        .tab-box { display: flex; margin: 20px; background: #000; padding: 5px; border-radius: 12px; border: 1px solid var(--border); }
+        .tab { flex: 1; text-align: center; padding: 10px; font-size: 13px; font-weight: 600; color: var(--text-gray); border-radius: 8px; cursor: pointer; transition: 0.3s; }
         .tab.active { background: #1e293b; color: #fff; }
 
-        /* Category Filter */
-        .cat-scroller {
-            display: flex;
-            gap: 10px;
-            overflow-x: auto;
-            padding: 0 20px 20px;
-            scrollbar-width: none;
-        }
+        /* Categories */
+        .cat-scroller { display: flex; gap: 10px; overflow-x: auto; padding: 0 20px 20px; scrollbar-width: none; }
         .cat-scroller::-webkit-scrollbar { display: none; }
-        .pill {
-            padding: 7px 16px;
-            background: rgba(255,255,255,0.05);
-            border: 1px solid var(--border);
-            border-radius: 50px;
-            font-size: 12px;
-            white-space: nowrap;
-            cursor: pointer;
-            color: var(--text-gray);
-        }
+        .pill { padding: 7px 16px; background: rgba(255,255,255,0.05); border: 1px solid var(--border); border-radius: 50px; font-size: 12px; white-space: nowrap; cursor: pointer; color: var(--text-gray); }
         .pill.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 
         /* Match Card */
@@ -103,58 +59,29 @@
             margin-bottom: 20px;
             padding: 20px;
             border: 1px solid var(--border);
-            position: relative;
-            overflow: hidden;
+            text-align: center;
         }
 
-        .card-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .live-label { color: var(--accent); font-size: 11px; font-weight: 800; display: flex; align-items: center; gap: 5px; }
-        .live-label span { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; animation: pulse 1s infinite; }
+        .card-meta { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 11px; font-weight: 700; }
+        .live-tag { color: var(--accent); display: flex; align-items: center; gap: 5px; }
+        .live-tag span { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; display: inline-block; }
 
-        .teams {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .team { flex: 1; text-align: center; }
-        .team img { 
-            width: 60px; height: 60px; 
-            border-radius: 50%; background: #1a1f2e; 
-            padding: 8px; border: 2px solid var(--border);
-            object-fit: contain;
-        }
-        .team p { font-size: 12px; font-weight: 600; margin-top: 8px; }
-        .vs { font-weight: 800; font-size: 18px; opacity: 0.2; }
+        .teams-row { display: flex; justify-content: space-around; align-items: center; margin-bottom: 15px; }
+        .team { flex: 1; }
+        .team img { width: 65px; height: 65px; border-radius: 50%; object-fit: contain; background: #1a1f2e; padding: 8px; border: 1px solid var(--border); margin-bottom: 8px; }
+        .team-name { font-size: 12px; font-weight: 600; color: #fff; }
+        .vs-text { font-size: 16px; font-weight: 800; opacity: 0.2; font-style: italic; }
 
-        .match-info { text-align: center; }
-        .league { color: #00f2fe; font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
-        .title { font-size: 14px; font-weight: 600; margin-bottom: 20px; line-height: 1.4; color: #f8fafc; }
+        .league-name { color: #00f2fe; font-size: 10px; font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+        .match-title { font-size: 15px; font-weight: 600; margin-bottom: 20px; line-height: 1.4; }
 
-        .btn {
-            width: 100%;
-            padding: 14px;
-            border-radius: 12px;
-            border: none;
-            font-weight: 700;
-            font-size: 14px;
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            transition: 0.3s;
+        .play-btn {
+            width: 100%; padding: 14px; border-radius: 12px; border: none; font-weight: 700;
+            display: flex; justify-content: center; align-items: center; gap: 10px;
+            text-decoration: none; font-size: 14px; transition: 0.3s;
         }
-        .btn-live { background: linear-gradient(90deg, #ff2a5f, #ff5e84); color: #fff; box-shadow: 0 4px 15px rgba(255, 42, 95, 0.2); }
+        .btn-live { background: var(--accent); color: #fff; }
         .btn-upcoming { background: rgba(255,255,255,0.05); color: #fff; border: 1px solid var(--border); }
-
-        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
     </style>
 </head>
 <body>
@@ -162,109 +89,112 @@
 <div class="app-container">
     <header>
         <a href="#" class="logo">LIVE<span>SPORTS</span></a>
-        <div class="status"><i class="fa fa-circle"></i> SERVER LIVE</div>
+        <div class="status">● SERVER ONLINE</div>
     </header>
 
     <div class="tab-box">
-        <div class="tab active" onclick="changeMode(this, 'live')">Live Stream</div>
-        <div class="tab" onclick="changeMode(this, 'upcoming')">Upcoming</div>
+        <div class="tab active" onclick="setFilterMode(this, 'live')">Live Now</div>
+        <div class="tab" onclick="setFilterMode(this, 'upcoming')">Upcoming</div>
     </div>
 
-    <div class="cat-scroller" id="catMenu"></div>
+    <div class="cat-scroller" id="catBar"></div>
 
-    <div class="match-list" id="matchArea">
-        </div>
+    <div class="match-list" id="matchBox">
+        <p style="text-align:center; padding-top:100px; opacity:0.5;">Loading Channels...</p>
+    </div>
 </div>
 
 <script>
-    const API = "https://raw.githubusercontent.com/srhady/bingstream/refs/heads/main/playlist.json";
-    let allData = [];
-    let activeMode = "live";
-    let activeCat = "All";
+    const JSON_URL = "https://raw.githubusercontent.com/srhady/bingstream/refs/heads/main/playlist.json";
+    let channelData = [];
+    let currentMode = "live";
+    let selectedCat = "All";
 
-    async function fetchData() {
+    async function init() {
         try {
-            const res = await fetch(`${API}?v=${Date.now()}`);
-            const json = await res.json();
-            // Intro বাদ দিয়ে ফ্রেশ ডেটা নেওয়া
-            allData = json.channels.filter(item => item.League !== "Intro" && item["Match Title"] !== "Intro");
-            
+            const response = await fetch(`${JSON_URL}?v=${Date.now()}`);
+            const data = await response.json();
+            // Intro ফিল্টার করা
+            channelData = data.channels.filter(c => c.League !== "Intro");
             renderCats();
-            renderMatches();
+            renderUI();
         } catch (e) {
-            document.getElementById('matchArea').innerHTML = "Failed to load matches.";
+            document.getElementById('matchBox').innerHTML = "Error loading data.";
         }
     }
 
     function renderCats() {
-        const menu = document.getElementById('catMenu');
-        const categories = ["All", ...new Set(allData.map(m => m.Category).filter(Boolean))];
-        menu.innerHTML = categories.map(c => `
-            <div class="pill ${c === activeCat ? 'active' : ''}" onclick="setCat('${c}')">${c}</div>
+        const bar = document.getElementById('catBar');
+        const uniqueCats = ["All", ...new Set(channelData.map(c => c.Category).filter(Boolean))];
+        bar.innerHTML = uniqueCats.map(c => `
+            <div class="pill ${c === selectedCat ? 'active' : ''}" onclick="filterCat('${c}')">${c}</div>
         `).join('');
     }
 
-    function setCat(c) {
-        activeCat = c;
+    function filterCat(c) {
+        selectedCat = c;
         renderCats();
-        renderMatches();
+        renderUI();
     }
 
-    function changeMode(el, mode) {
+    function setFilterMode(el, mode) {
         document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
         el.classList.add('active');
-        activeMode = mode;
-        renderMatches();
+        currentMode = mode;
+        renderUI();
     }
 
-    function renderMatches() {
-        const container = document.getElementById('matchArea');
-        const filtered = allData.filter(m => {
-            const modeMatch = m["Match Status"].toLowerCase() === activeMode;
-            const catMatch = activeCat === "All" || m.Category === activeCat;
-            return modeMatch && catMatch;
+    function renderUI() {
+        const box = document.getElementById('matchBox');
+        const filtered = channelData.filter(m => {
+            const mMatch = m["Match Status"].toLowerCase() === currentMode;
+            const cMatch = selectedCat === "All" || m.Category === selectedCat;
+            return mMatch && cMatch;
         });
 
         if (filtered.length === 0) {
-            container.innerHTML = `<p style="text-align:center; padding:50px; opacity:0.3;">No ${activeMode} matches found</p>`;
+            box.innerHTML = `<p style="text-align:center; padding:50px; opacity:0.3;">No matches available.</p>`;
             return;
         }
 
-        container.innerHTML = filtered.map(m => `
-            <div class="card">
-                <div class="card-top">
-                    ${activeMode === 'live' 
-                        ? `<div class="live-label"><span></span> LIVE NOW</div>` 
-                        : `<div style="font-size:11px; color:var(--text-gray);"><i class="fa fa-clock"></i> ${m["Start Time"]}</div>`
-                    }
-                    <div style="font-size:10px; opacity:0.4;">HD QUALITY</div>
-                </div>
-
-                <div class="teams">
+        box.innerHTML = filtered.map(m => {
+            // লোগো থাকলে দেখাবে, না থাকলে লোগোর সেকশনটাই আসবে না
+            const hasLogos = m["Team 1 Logo"] || m["Team 2 Logo"];
+            const teamHtml = hasLogos ? `
+                <div class="teams-row">
                     <div class="team">
-                        <img src="${m["Team 1 Logo"]}" onerror="this.src='https://placehold.co/100x100/1a1f2e/white?text=T1'">
-                        <p>${m["Team 1 Name"] || 'Team 1'}</p>
+                        ${m["Team 1 Logo"] ? `<img src="${m["Team 1 Logo"]}" onerror="this.style.display='none'">` : ''}
+                        <div class="team-name">${m["Team 1 Name"] || ''}</div>
                     </div>
-                    <div class="vs">VS</div>
+                    <div class="vs-text">VS</div>
                     <div class="team">
-                        <img src="${m["Team 2 Logo"]}" onerror="this.src='https://placehold.co/100x100/1a1f2e/white?text=T2'">
-                        <p>${m["Team 2 Name"] || 'Team 2'}</p>
+                        ${m["Team 2 Logo"] ? `<img src="${m["Team 2 Logo"]}" onerror="this.style.display='none'">` : ''}
+                        <div class="team-name">${m["Team 2 Name"] || ''}</div>
                     </div>
-                </div>
+                </div>` : '';
 
-                <div class="match-info">
-                    <div class="league">${m.League}</div>
-                    <div class="title">${m["Match Title"]}</div>
-                    ${activeMode === 'live' 
-                        ? `<a href="play.html?match=${encodeURIComponent(m["Match Title"])}" class="btn btn-live"><i class="fa fa-play-circle"></i> WATCH STREAM</a>`
-                        : `<button class="btn btn-upcoming"><i class="fa fa-bell"></i> NOTIFY ME</button>`
+            return `
+                <div class="card">
+                    <div class="card-meta">
+                        ${currentMode === 'live' ? `<div class="live-tag"><span></span> LIVE</div>` : `<div>${m["Start Time"]}</div>`}
+                        <div style="opacity:0.4;">FULL HD</div>
+                    </div>
+                    
+                    ${teamHtml}
+
+                    <div class="league-name">${m.League || ''}</div>
+                    <div class="match-title">${m["Match Title"]}</div>
+                    
+                    ${currentMode === 'live' 
+                        ? `<a href="play.html?match=${encodeURIComponent(m["Match Title"])}" class="play-btn btn-live"><i class="fa fa-play-circle"></i> WATCH NOW</a>`
+                        : `<button class="play-btn btn-upcoming"><i class="fa fa-bell"></i> NOTIFY ME</button>`
                     }
                 </div>
-            </div>
-        `).join('');
+            `;
+        }).join('');
     }
 
-    fetchData();
+    init();
 </script>
 
 </body>
