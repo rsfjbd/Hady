@@ -35,6 +35,21 @@
             "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
             "Referer": "https://api2.ifnewgen.xyz/",
             "Stream URL": "http://180.94.28.28:8097/T-Sports/preview.mp4?token=a875b93e621271d4a2b05ca1469d4996bc0d55d6-671a49afdcb1bb33bae5927c3a27b173-1776748374-1776744774"
+        },
+        {
+            "Category": "Cricket",
+            "League": "Ban vs New Live",
+            "Team 1 Name": "BAN",
+            "Team 2 Name": "NEW",
+            "Team 1 Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwLdD-y7gCNzQOcnMOmd18TEIW0fTvxMiqMEjTaquNQM_Q2ypHaz5hFYgH&s=10",
+            "Team 2 Logo": "https://img.freepik.com/premium-vector/new-zealand-waving-flag-illustrator-national-icon_1082479-33409.jpg?semt=ais_hybrid&w=740&q=80",
+            "Match Title": "Live Cricket channel | T Sports [Server 1]",
+            "Match Poster": "https://placehold.co/800x450/ffffff/000000.png?text=Auto%20racing%20channel%0AAuto%20Racing&font=Oswald",
+            "Match Status": "Live",
+            "Start Time": "Live Now",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": "http://180.94.28.28:8097/T-Sports/preview.mp4?token=a875b93e621271d4a2b05ca1469d4996bc0d55d6-671a49afdcb1bb33bae5927c3a27b173-1776748374-1776744774"
         }
     ]
 }
