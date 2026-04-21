@@ -1,194 +1,190 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
-    <title>LiveSportsPlay · VIP Stream</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
-    <style>
-        :root {
-            --bg-main: #05070f;
-            --bg-card: #0d111c;
-            --glass-border: rgba(255, 255, 255, 0.1);
-            --accent-pink: #ff2a5f;
-            --text-muted: #8b949e;
+{
+    "playlist_info": {
+        "name": "Bingstream Auto Update Playlist",
+        "telegram": "https://t.me/livesportsplay",
+        "owner": "Md Sohanur Rahman Hady",
+        "last_update_time": "8:01:27 AM 21-04-2026"
+    },
+    "channels": [
+        {
+            "Category": "LIVE EVENT",
+            "League": "Intro",
+            "Team 1 Name": "Bingstream",
+            "Team 2 Name": "Intro",
+            "Team 1 Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwLdD-y7gCNzQOcnMOmd18TEIW0fTvxMiqMEjTaquNQM_Q2ypHaz5hFYgH&s=10",
+            "Team 2 Logo": "https://img.freepik.com/premium-vector/new-zealand-waving-flag-illustrator-national-icon_1082479-33409.jpg?semt=ais_hybrid&w=740&q=80",
+            "Match Title": "Intro",
+            "Match Poster": "https://github.com/srhady/Hady/raw/refs/heads/main/1773124095740.png",
+            "Match Status": "Live",
+            "Start Time": "Always",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": "https://github.com/srhady/Hady/raw/refs/heads/main/video_20260310_131739_edit.mp4"
+        },
+        {
+            "Category": "Cricket",
+            "League": "Ban vs New Live",
+            "Team 1 Name": "BAN",
+            "Team 2 Name": "NEW",
+            "Team 1 Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwLdD-y7gCNzQOcnMOmd18TEIW0fTvxMiqMEjTaquNQM_Q2ypHaz5hFYgH&s=10",
+            "Team 2 Logo": "https://img.freepik.com/premium-vector/new-zealand-waving-flag-illustrator-national-icon_1082479-33409.jpg?semt=ais_hybrid&w=740&q=80",
+            "Match Title": "Live Cricket channel | T Sports [Server 1]",
+            "Match Poster": "https://placehold.co/800x450/ffffff/000000.png?text=Auto%20racing%20channel%0AAuto%20Racing&font=Oswald",
+            "Match Status": "Live",
+            "Start Time": "Live Now",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": "https://owrcovcrpy.gpcdn.net/bpk-tv/1709/output/index.m3u8"
+        },
+        {
+            "Category": "Cricket",
+            "League": "Ban vs New Live",
+            "Team 1 Name": "BAN",
+            "Team 2 Name": "NEW",
+            "Team 1 Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwLdD-y7gCNzQOcnMOmd18TEIW0fTvxMiqMEjTaquNQM_Q2ypHaz5hFYgH&s=10",
+            "Team 2 Logo": "https://img.freepik.com/premium-vector/new-zealand-waving-flag-illustrator-national-icon_1082479-33409.jpg?semt=ais_hybrid&w=740&q=80",
+            "Match Title": "Live Cricket channel | T Sports [Server 1]",
+            "Match Poster": "https://placehold.co/800x450/ffffff/000000.png?text=Auto%20racing%20channel%0AAuto%20Racing&font=Oswald",
+            "Match Status": "Live",
+            "Start Time": "Live Now",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": "http://180.94.28.28:8097/T-Sports/preview.mp4?token=a875b93e621271d4a2b05ca1469d4996bc0d55d6-671a49afdcb1bb33bae5927c3a27b173-1776748374-1776744774"
+        },
+        {
+            "Category": "Football",
+            "League": "K League 1",
+            "Team 1 Name": "Pohang Steelers",
+            "Team 2 Name": "Gwangju FC",
+            "Team 1 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/2764.png",
+            "Team 2 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/2759.png",
+            "Match Title": "Pohang Steelers VS Gwangju FC | K League 1",
+            "Match Poster": "https://placehold.co/800x450/ffffff/000000.png?text=Pohang%20Steelers%0AVS%0AGwangju%20FC%0AK%20League%201&font=Oswald",
+            "Match Status": "Upcoming",
+            "Start Time": "4:30 PM 22-04-2026",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": ""
+        },
+        {
+            "Category": "Football",
+            "League": "Frauen Bundesliga",
+            "Team 1 Name": "Werder Bremen W",
+            "Team 2 Name": "VfL Wolfsburg W",
+            "Team 1 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/1870.png",
+            "Team 2 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/1863.png",
+            "Match Title": "Werder Bremen W VS VfL Wolfsburg W | Frauen Bundesliga",
+            "Match Poster": "https://placehold.co/800x450/ffffff/000000.png?text=Werder%20Bremen%20W%0AVS%0AVfL%20Wolfsburg%20W%0AFrauen%20Bundesliga&font=Oswald",
+            "Match Status": "Upcoming",
+            "Start Time": "10:00 PM 22-04-2026",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": ""
+        },
+        {
+            "Category": "Football",
+            "League": "Frauen Bundesliga",
+            "Team 1 Name": "Union Berlin W",
+            "Team 2 Name": "Bayern Munich W",
+            "Team 1 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/24133.png",
+            "Team 2 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/1860.png",
+            "Match Title": "Union Berlin W VS Bayern Munich W | Frauen Bundesliga",
+            "Match Poster": "https://placehold.co/800x450/ffffff/000000.png?text=Union%20Berlin%20W%0AVS%0ABayern%20Munich%20W%0AFrauen%20Bundesliga&font=Oswald",
+            "Match Status": "Upcoming",
+            "Start Time": "10:00 PM 22-04-2026",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": ""
+        },
+        {
+            "Category": "Football",
+            "League": "Ligue 1",
+            "Team 1 Name": "Paris Saint Germain",
+            "Team 2 Name": "Nantes",
+            "Team 1 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/85.png",
+            "Team 2 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/83.png",
+            "Match Title": "Paris Saint Germain VS Nantes | Ligue 1",
+            "Match Poster": "https://placehold.co/800x450/ffffff/000000.png?text=Paris%20Saint%20Germain%0AVS%0ANantes%0ALigue%201&font=Oswald",
+            "Match Status": "Upcoming",
+            "Start Time": "11:00 PM 22-04-2026",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": ""
+        },
+        {
+            "Category": "Football",
+            "League": "Segunda Liga",
+            "Team 1 Name": "Oliveirense",
+            "Team 2 Name": "Benfica B",
+            "Team 1 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/233.png",
+            "Team 2 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/229.png",
+            "Match Title": "Oliveirense VS Benfica B | Segunda Liga",
+            "Match Poster": "https://placehold.co/800x450/ffffff/000000.png?text=Oliveirense%0AVS%0ABenfica%20B%0ASegunda%20Liga&font=Oswald",
+            "Match Status": "Upcoming",
+            "Start Time": "11:00 PM 22-04-2026",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": ""
+        },
+        {
+            "Category": "Football",
+            "League": "Türkiye Kupası",
+            "Team 1 Name": "Galatasaray",
+            "Team 2 Name": "Gençlerbirliği S.K.",
+            "Team 1 Logo": "https://static-live.linewgen.xyz/live/bing/img/teams/24077f43e6ff21a7f245fd1aee110367.png",
+            "Team 2 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/997.png",
+            "Match Title": "Galatasaray VS Gençlerbirliği S.K. | Türkiye Kupası",
+            "Match Poster": "https://placehold.co/800x450/ffffff/000000.png?text=Galatasaray%0AVS%0AGen%C3%A7lerbirli%C4%9Fi%20S.K.%0AT%C3%BCrkiye%20Kupas%C4%B1&font=Oswald",
+            "Match Status": "Upcoming",
+            "Start Time": "11:30 PM 22-04-2026",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": ""
+        },
+        {
+            "Category": "Football",
+            "League": "La Liga",
+            "Team 1 Name": "Real Sociedad",
+            "Team 2 Name": "Getafe",
+            "Team 1 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/548.png",
+            "Team 2 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/546.png",
+            "Match Title": "Real Sociedad VS Getafe | La Liga",
+            "Match Poster": "https://placehold.co/800x450/ffffff/000000.png?text=Real%20Sociedad%0AVS%0AGetafe%0ALa%20Liga&font=Oswald",
+            "Match Status": "Upcoming",
+            "Start Time": "12:00 AM 23-04-2026",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": ""
+        },
+        {
+            "Category": "Football",
+            "League": "Jupiler Pro League",
+            "Team 1 Name": "Club Brugge KV",
+            "Team 2 Name": "KV Mechelen",
+            "Team 1 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/569.png",
+            "Team 2 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/266.png",
+            "Match Title": "Club Brugge KV VS KV Mechelen | Jupiler Pro League",
+            "Match Poster": "https://placehold.co/800x450/ffffff/000000.png?text=Club%20Brugge%20KV%0AVS%0AKV%20Mechelen%0AJupiler%20Pro%20League&font=Oswald",
+            "Match Status": "Upcoming",
+            "Start Time": "12:30 AM 23-04-2026",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": ""
+        },
+        {
+            "Category": "Football",
+            "League": "Jupiler Pro League",
+            "Team 1 Name": "Union St. Gilloise",
+            "Team 2 Name": "Gent",
+            "Team 1 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/1393.png",
+            "Team 2 Logo": "https://static-live.linewgen.xyz/live/bing/img/rapid/teams/631.png",
+            "Match Title": "Union St. Gilloise VS Gent | Jupiler Pro League",
+            "Match Poster": "https://placehold.co/800x450/ffffff/000000.png?text=Union%20St.%20Gilloise%0AVS%0AGent%0AJupiler%20Pro%20League&font=Oswald",
+            "Match Status": "Upcoming",
+            "Start Time": "12:30 AM 23-04-2026",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": ""
         }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-
-        body { background-color: var(--bg-main); color: #fff; min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
-
-        header {
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid var(--glass-border);
-            background: rgba(5, 7, 15, 0.9);
-            backdrop-filter: blur(10px);
-            position: sticky; top: 0; z-index: 100;
-        }
-
-        .back-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--glass-border);
-            color: #fff;
-            padding: 6px 14px;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
-            display: flex; align-items: center; gap: 6px;
-        }
-
-        .logo { font-size: 20px; font-weight: 800; text-decoration: none; }
-        .logo span:first-child { color: #fff; }
-        .logo span:last-child { color: var(--accent-pink); }
-
-        .main-wrapper { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 15px; }
-
-        .player-container {
-            width: 100%; max-width: 900px; aspect-ratio: 16/9;
-            background: #000; position: relative; border-radius: 15px;
-            overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.8);
-            border: 1px solid var(--glass-border);
-        }
-
-        video { width: 100%; height: 100%; object-fit: contain; background: #000; }
-
-        .loader {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            width: 40px; height: 40px; border: 3px solid rgba(255,42,95,0.3);
-            border-top-color: var(--accent-pink); border-radius: 50%;
-            animation: spin 1s linear infinite; display: none; z-index: 5;
-        }
-        @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
-
-        /* --- Updated Info Card for One-Line Tags --- */
-        .info-card {
-            width: 100%; max-width: 900px; margin-top: 15px; padding: 20px;
-            background: var(--bg-card); border-radius: 15px; border: 1px solid var(--glass-border);
-            display: flex; flex-direction: column; align-items: center; text-align: center;
-        }
-
-        .m-title { font-family: 'Oswald', sans-serif; font-size: 20px; margin-bottom: 15px; width: 100%; }
-
-        .m-tags { 
-            display: flex; 
-            flex-direction: row; 
-            justify-content: center; 
-            align-items: center; 
-            gap: 8px; 
-            width: 100%;
-            overflow-x: auto; /* মোবাইলে জায়গা কম হলে স্ক্রল করবে কিন্তু নিচে নামবে না */
-            white-space: nowrap; /* টেক্সট ভেঙে নিচে নামা বন্ধ করবে */
-            padding-bottom: 5px;
-        }
-
-        .m-tags::-webkit-scrollbar { display: none; } /* স্ক্রলবার হাইড */
-
-        .m-tag {
-            background: rgba(255,255,255,0.05);
-            padding: 5px 10px; border-radius: 8px;
-            font-size: 11px; font-weight: 500; color: var(--text-muted);
-            display: inline-flex; align-items: center; gap: 4px;
-            border: 1px solid var(--glass-border);
-            flex-shrink: 0; /* ট্যাগগুলো চ্যাপ্টা হবে না */
-        }
-
-        .tag-live { color: var(--accent-pink); border-color: rgba(255,42,95,0.3); background: rgba(255,42,95,0.05); }
-        .dot { width: 6px; height: 6px; background: var(--accent-pink); border-radius: 50%; animation: blink 1s infinite alternate; }
-        @keyframes blink { from { opacity: 1; } to { opacity: 0.3; } }
-
-        .ad-section { width: 100%; max-width: 900px; margin-top: 15px; text-align: center; }
-        .ad-box { background: rgba(255,255,255,0.02); border: 1px dashed var(--glass-border); border-radius: 12px; min-height: 250px; display: flex; justify-content: center; align-items: center; }
-    </style>
-</head>
-<body>
-
-<header>
-    <a href="index.html" class="back-btn"><i class="fa fa-arrow-left"></i> Home</a>
-    <a href="#" class="logo"><span>Live</span><span>Sports</span></a>
-</header>
-
-<div class="main-wrapper">
-    <div class="player-container">
-        <div class="loader" id="videoLoader"></div>
-        <video id="mainVideo" controls playsinline></video>
-    </div>
-
-    <div class="info-card">
-        <h1 class="m-title" id="mTitle">Loading Stream...</h1>
-        <div class="m-tags">
-            <span class="m-tag tag-live"><div class="dot"></div> LIVE</span>
-            <span class="m-tag"><i class="fa fa-trophy"></i> <span id="mSport">Sports</span></span>
-            <span class="m-tag"><i class="fa fa-users"></i> <span id="viewers">0</span> Watching</span>
-        </div>
-    </div>
-
-    <div class="ad-section">
-        <div class="ad-box">
-            <script type="text/javascript">
-                atOptions = {'key' : 'd6014953fbfeb02ea1203574721f5745','format' : 'iframe','height' : 250,'width' : 300,'params' : {}};
-            </script>
-            <script src="https://www.highperformanceformat.com/d6014953fbfeb02ea1203574721f5745/invoke.js"></script>
-        </div>
-    </div>
-</div>
-
-<script>
-    const JSON_URL = 'https://raw.githubusercontent.com/srhady/bingstream/refs/heads/main/playlist.json?t=' + Date.now();
-    const urlParams = new URLSearchParams(window.location.search);
-    const matchSlug = urlParams.get('match');
-
-    document.getElementById('viewers').innerText = (Math.random() * (25 - 8) + 8).toFixed(1) + 'k';
-
-    async function initPlayer() {
-        if (!matchSlug) return;
-        const video = document.getElementById('mainVideo');
-        const loader = document.getElementById('videoLoader');
-
-        try {
-            loader.style.display = 'block';
-            const res = await fetch(JSON_URL, { cache: "no-store" });
-            const data = await res.json();
-            
-            const match = data.channels.find(c => {
-                const rawTitle = c['Match Title'] || "";
-                return rawTitle.split('|')[0].trim().replace(/[^a-zA-Z0-9]/g, '-').toLowerCase() === matchSlug;
-            });
-
-            if (match) {
-                document.getElementById('mTitle').innerText = match['Match Title'].split('|')[0].trim();
-                document.getElementById('mSport').innerText = match['Category'] || "Sports";
-                const streamUrl = match['Stream URL'];
-                if (match['Match Poster']) video.poster = match['Match Poster'];
-
-                if (Hls.isSupported() && streamUrl.includes('.m3u8')) {
-                    const hls = new Hls();
-                    hls.loadSource(streamUrl);
-                    hls.attachMedia(video);
-                    hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                        loader.style.display = 'none';
-                        video.play().catch(() => {});
-                    });
-                } else {
-                    video.src = streamUrl;
-                    video.onloadedmetadata = () => {
-                        loader.style.display = 'none';
-                        video.play().catch(() => {});
-                    };
-                }
-            }
-        } catch (e) {
-            loader.style.display = 'none';
-        }
-    }
-    initPlayer();
-</script>
-
-</body>
-</html>
+    ]
+}
