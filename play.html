@@ -19,7 +19,14 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
-        body { background-color: var(--bg-main); color: #fff; min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
+        body { 
+            background-color: var(--bg-main); 
+            color: #fff; 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            overflow-x: hidden; 
+        }
 
         header {
             padding: 15px 20px;
@@ -48,12 +55,25 @@
         .logo span:first-child { color: #fff; }
         .logo span:last-child { color: var(--accent-pink); }
 
-        .main-wrapper { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 15px; }
+        .main-wrapper { 
+            flex: 1; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            padding: 15px; 
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
 
         .player-container {
-            width: 100%; max-width: 900px; aspect-ratio: 16/9;
-            background: #000; position: relative; border-radius: 15px;
-            overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            width: 100%; 
+            aspect-ratio: 16/9;
+            background: #000; 
+            position: relative; 
+            border-radius: 15px;
+            overflow: hidden; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
             border: 1px solid var(--glass-border);
         }
 
@@ -67,44 +87,81 @@
         }
         @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
 
-        /* --- Updated Info Card for One-Line Tags --- */
         .info-card {
-            width: 100%; max-width: 900px; margin-top: 15px; padding: 20px;
-            background: var(--bg-card); border-radius: 15px; border: 1px solid var(--glass-border);
-            display: flex; flex-direction: column; align-items: center; text-align: center;
+            width: 100%; 
+            margin-top: 15px; 
+            padding: 20px;
+            background: var(--bg-card); 
+            border-radius: 15px; 
+            border: 1px solid var(--glass-border);
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            text-align: center;
         }
 
-        .m-title { font-family: 'Oswald', sans-serif; font-size: 20px; margin-bottom: 15px; width: 100%; }
+        .m-title { 
+            font-family: 'Oswald', sans-serif; 
+            font-size: 20px; 
+            margin-bottom: 15px; 
+            line-height: 1.4;
+        }
 
         .m-tags { 
             display: flex; 
             flex-direction: row; 
             justify-content: center; 
             align-items: center; 
-            gap: 8px; 
+            gap: 12px; 
             width: 100%;
-            overflow-x: auto; /* মোবাইলে জায়গা কম হলে স্ক্রল করবে কিন্তু নিচে নামবে না */
-            white-space: nowrap; /* টেক্সট ভেঙে নিচে নামা বন্ধ করবে */
-            padding-bottom: 5px;
+            white-space: nowrap; 
         }
-
-        .m-tags::-webkit-scrollbar { display: none; } /* স্ক্রলবার হাইড */
 
         .m-tag {
             background: rgba(255,255,255,0.05);
-            padding: 5px 10px; border-radius: 8px;
-            font-size: 11px; font-weight: 500; color: var(--text-muted);
-            display: inline-flex; align-items: center; gap: 4px;
+            padding: 6px 14px; 
+            border-radius: 10px;
+            font-size: 11px; 
+            font-weight: 600; 
+            color: var(--text-muted);
+            display: inline-flex; 
+            align-items: center; 
+            gap: 6px;
             border: 1px solid var(--glass-border);
-            flex-shrink: 0; /* ট্যাগগুলো চ্যাপ্টা হবে না */
         }
 
-        .tag-live { color: var(--accent-pink); border-color: rgba(255,42,95,0.3); background: rgba(255,42,95,0.05); }
-        .dot { width: 6px; height: 6px; background: var(--accent-pink); border-radius: 50%; animation: blink 1s infinite alternate; }
+        .tag-live { 
+            color: var(--accent-pink); 
+            border-color: rgba(255,42,95,0.3); 
+            background: rgba(255,42,95,0.05); 
+        }
+
+        .dot { 
+            width: 6px; 
+            height: 6px; 
+            background: var(--accent-pink); 
+            border-radius: 50%; 
+            animation: blink 1s infinite alternate; 
+        }
+
         @keyframes blink { from { opacity: 1; } to { opacity: 0.3; } }
 
-        .ad-section { width: 100%; max-width: 900px; margin-top: 15px; text-align: center; }
-        .ad-box { background: rgba(255,255,255,0.02); border: 1px dashed var(--glass-border); border-radius: 12px; min-height: 250px; display: flex; justify-content: center; align-items: center; }
+        .ad-section { 
+            width: 100%; 
+            margin-top: 20px; 
+            display: flex; 
+            justify-content: center; 
+        }
+
+        .ad-box { 
+            width: 100%; 
+            max-width: 300px; 
+            min-height: 250px; 
+            background: rgba(255,255,255,0.02); 
+            border: 1px dashed var(--glass-border); 
+            border-radius: 12px; 
+        }
+
     </style>
 </head>
 <body>
@@ -123,9 +180,15 @@
     <div class="info-card">
         <h1 class="m-title" id="mTitle">Loading Stream...</h1>
         <div class="m-tags">
-            <span class="m-tag tag-live"><div class="dot"></div> LIVE</span>
-            <span class="m-tag"><i class="fa fa-trophy"></i> <span id="mSport">Sports</span></span>
-            <span class="m-tag"><i class="fa fa-users"></i> <span id="viewers">0</span> Watching</span>
+            <span class="m-tag tag-live">
+                <div class="dot"></div> LIVE
+            </span>
+            <span class="m-tag">
+                <i class="fa fa-trophy"></i> <span id="mSport">Sports</span>
+            </span>
+            <span class="m-tag">
+                <i class="fa fa-bolt"></i> Ultra HD
+            </span>
         </div>
     </div>
 
@@ -144,8 +207,6 @@
     const urlParams = new URLSearchParams(window.location.search);
     const matchSlug = urlParams.get('match');
 
-    document.getElementById('viewers').innerText = (Math.random() * (25 - 8) + 8).toFixed(1) + 'k';
-
     async function initPlayer() {
         if (!matchSlug) return;
         const video = document.getElementById('mainVideo');
@@ -157,14 +218,15 @@
             const data = await res.json();
             
             const match = data.channels.find(c => {
-                const rawTitle = c['Match Title'] || "";
-                return rawTitle.split('|')[0].trim().replace(/[^a-zA-Z0-9]/g, '-').toLowerCase() === matchSlug;
+                const title = c['Match Title'] || "";
+                return title.split('|')[0].trim().replace(/[^a-zA-Z0-9]/g, '-').toLowerCase() === matchSlug;
             });
 
             if (match) {
                 document.getElementById('mTitle').innerText = match['Match Title'].split('|')[0].trim();
                 document.getElementById('mSport').innerText = match['Category'] || "Sports";
                 const streamUrl = match['Stream URL'];
+                
                 if (match['Match Poster']) video.poster = match['Match Poster'];
 
                 if (Hls.isSupported() && streamUrl.includes('.m3u8')) {
@@ -185,6 +247,7 @@
             }
         } catch (e) {
             loader.style.display = 'none';
+            console.error("Load Error");
         }
     }
     initPlayer();
