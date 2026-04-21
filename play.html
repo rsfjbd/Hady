@@ -19,7 +19,7 @@
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
 
-        body { background-color: var(--bg-main); color: #fff; min-height: 100vh; display: flex; flex-direction: column; }
+        body { background-color: var(--bg-main); color: #fff; min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; }
 
         header {
             padding: 15px 20px;
@@ -29,9 +29,7 @@
             border-bottom: 1px solid var(--glass-border);
             background: rgba(5, 7, 15, 0.9);
             backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            position: sticky; top: 0; z-index: 100;
         }
 
         .back-btn {
@@ -43,9 +41,7 @@
             text-decoration: none;
             font-size: 13px;
             font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 6px;
+            display: flex; align-items: center; gap: 6px;
         }
 
         .logo { font-size: 20px; font-weight: 800; text-decoration: none; }
@@ -55,63 +51,52 @@
         .main-wrapper { flex: 1; display: flex; flex-direction: column; align-items: center; padding: 15px; }
 
         .player-container {
-            width: 100%;
-            max-width: 900px;
-            aspect-ratio: 16/9;
-            background: #000;
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            width: 100%; max-width: 900px; aspect-ratio: 16/9;
+            background: #000; position: relative; border-radius: 15px;
+            overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.8);
             border: 1px solid var(--glass-border);
         }
 
-        video { width: 100%; height: 100%; object-fit: cover; }
+        video { width: 100%; height: 100%; object-fit: contain; background: #000; }
 
-        /* --- কার্ড কন্টেন্ট সেন্টার করার জন্য আপডেট --- */
+        .loader {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 40px; height: 40px; border: 3px solid rgba(255,42,95,0.3);
+            border-top-color: var(--accent-pink); border-radius: 50%;
+            animation: spin 1s linear infinite; display: none; z-index: 5;
+        }
+        @keyframes spin { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+        /* --- Updated Info Card for One-Line Tags --- */
         .info-card {
-            width: 100%;
-            max-width: 900px;
-            margin-top: 15px;
-            padding: 20px;
-            background: var(--bg-card);
-            border-radius: 15px;
-            border: 1px solid var(--glass-border);
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* হরাইজন্টাল সেন্টার */
-            text-align: center;   /* টেক্সট সেন্টার */
+            width: 100%; max-width: 900px; margin-top: 15px; padding: 20px;
+            background: var(--bg-card); border-radius: 15px; border: 1px solid var(--glass-border);
+            display: flex; flex-direction: column; align-items: center; text-align: center;
         }
 
-        .m-title { 
-            font-family: 'Oswald', sans-serif; 
-            font-size: 20px; 
-            margin-bottom: 15px;
-            width: 100%;
-        }
+        .m-title { font-family: 'Oswald', sans-serif; font-size: 20px; margin-bottom: 15px; width: 100%; }
 
         .m-tags { 
             display: flex; 
-            flex-direction: row;
-            flex-wrap: wrap; 
+            flex-direction: row; 
+            justify-content: center; 
+            align-items: center; 
             gap: 8px; 
-            justify-content: center; /* ট্যাগগুলো মাঝখানে রাখবে */
-            align-items: center;
             width: 100%;
+            overflow-x: auto; /* মোবাইলে জায়গা কম হলে স্ক্রল করবে কিন্তু নিচে নামবে না */
+            white-space: nowrap; /* টেক্সট ভেঙে নিচে নামা বন্ধ করবে */
+            padding-bottom: 5px;
         }
+
+        .m-tags::-webkit-scrollbar { display: none; } /* স্ক্রলবার হাইড */
 
         .m-tag {
             background: rgba(255,255,255,0.05);
-            padding: 6px 12px;
-            border-radius: 10px;
-            font-size: 11px;
-            font-weight: 500;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 5px;
+            padding: 5px 10px; border-radius: 8px;
+            font-size: 11px; font-weight: 500; color: var(--text-muted);
+            display: inline-flex; align-items: center; gap: 4px;
             border: 1px solid var(--glass-border);
-            white-space: nowrap;
+            flex-shrink: 0; /* ট্যাগগুলো চ্যাপ্টা হবে না */
         }
 
         .tag-live { color: var(--accent-pink); border-color: rgba(255,42,95,0.3); background: rgba(255,42,95,0.05); }
@@ -131,6 +116,7 @@
 
 <div class="main-wrapper">
     <div class="player-container">
+        <div class="loader" id="videoLoader"></div>
         <video id="mainVideo" controls playsinline></video>
     </div>
 
@@ -154,25 +140,30 @@
 </div>
 
 <script>
-    const JSON_URL = 'https://raw.githubusercontent.com/srhady/bingstream/refs/heads/main/playlist.json';
+    const JSON_URL = 'https://raw.githubusercontent.com/srhady/bingstream/refs/heads/main/playlist.json?t=' + Date.now();
     const urlParams = new URLSearchParams(window.location.search);
     const matchSlug = urlParams.get('match');
 
-    document.getElementById('viewers').innerText = (Math.random() * (20 - 5) + 5).toFixed(1) + 'k';
+    document.getElementById('viewers').innerText = (Math.random() * (25 - 8) + 8).toFixed(1) + 'k';
 
     async function initPlayer() {
         if (!matchSlug) return;
+        const video = document.getElementById('mainVideo');
+        const loader = document.getElementById('videoLoader');
+
         try {
-            const res = await fetch(JSON_URL);
+            loader.style.display = 'block';
+            const res = await fetch(JSON_URL, { cache: "no-store" });
             const data = await res.json();
-            const match = data.channels.find(c => 
-                c['Match Title'].split('|')[0].trim().replace(/[^a-zA-Z0-9]/g, '-').toLowerCase() === matchSlug
-            );
+            
+            const match = data.channels.find(c => {
+                const rawTitle = c['Match Title'] || "";
+                return rawTitle.split('|')[0].trim().replace(/[^a-zA-Z0-9]/g, '-').toLowerCase() === matchSlug;
+            });
 
             if (match) {
                 document.getElementById('mTitle').innerText = match['Match Title'].split('|')[0].trim();
-                document.getElementById('mSport').innerText = match['Category'];
-                const video = document.getElementById('mainVideo');
+                document.getElementById('mSport').innerText = match['Category'] || "Sports";
                 const streamUrl = match['Stream URL'];
                 if (match['Match Poster']) video.poster = match['Match Poster'];
 
@@ -180,11 +171,21 @@
                     const hls = new Hls();
                     hls.loadSource(streamUrl);
                     hls.attachMedia(video);
+                    hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                        loader.style.display = 'none';
+                        video.play().catch(() => {});
+                    });
                 } else {
                     video.src = streamUrl;
+                    video.onloadedmetadata = () => {
+                        loader.style.display = 'none';
+                        video.play().catch(() => {});
+                    };
                 }
             }
-        } catch (e) { console.log(e); }
+        } catch (e) {
+            loader.style.display = 'none';
+        }
     }
     initPlayer();
 </script>
