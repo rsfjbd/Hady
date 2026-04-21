@@ -1,41 +1,26 @@
 {
   "settings": {
-    "notice": "Welcome To TVBD Sports | Live Football & Cricket"
+    "notice": "Welcome to Sports. Enjoy high-quality live streaming!"
   },
-
-  "matches": {
-    "1": {
-      "id": "1",
+  "matches": [
+    {
+      "id": "match_01",
       "leagueTitle": "UEFA Champions League",
+      "leagueLogo": "https://i.ibb.co/L8P4rXy/ucl.png",
       "team1Name": "Real Madrid",
-      "team1Logo": "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
-      "team2Name": "Barcelona",
-      "team2Logo": "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
-      "matchTime": "2026-04-21T22:00:00",
-      "matchEndTime": "2026-04-22T00:00:00",
+      "team1Logo": "https://i.ibb.co/hZ1LqG3/real-madrid.png",
+      "team2Name": "Man City",
+      "team2Logo": "https://i.ibb.co/jR0Y5T6/man-city.png",
+      "matchTime": "2026-04-21T21:00:00",
+      "matchEndTime": "2026-04-21T23:30:00",
       "streamLinks": [
-        {
-          "name": "HD Server",
-          "link": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
-        }
-      ]
-    },
-
-    "2": {
-      "id": "2",
-      "leagueTitle": "IPL T20",
-      "team1Name": "CSK",
-      "team1Logo": "https://upload.wikimedia.org/wikipedia/en/2/2e/Chennai_Super_Kings_Logo.svg",
-      "team2Name": "MI",
-      "team2Logo": "https://upload.wikimedia.org/wikipedia/en/c/cd/Mumbai_Indians_Logo.svg",
-      "matchTime": "2026-04-22T18:00:00",
-      "matchEndTime": "2026-04-22T22:00:00",
-      "streamLinks": [
-        {
-          "name": "Server 1",
-          "link": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
-        }
+        { "name": "Server 1 (HD)", "link": "https://test-streams.mux.dev/x36xhzz/url_8/1473044415_1.m3u8" },
+        { "name": "Server 2 (SD)", "link": "https://test-streams.mux.dev/x36xhzz/url_8/1473044415_1.m3u8" }
+      ],
+      "broadcasters": [
+        { "name": "Sony Ten 1 HD" },
+        { "name": "BT Sport 1" }
       ]
     }
-  }
+  ]
 }
