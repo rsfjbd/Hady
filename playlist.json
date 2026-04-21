@@ -1,26 +1,55 @@
 {
-  "settings": {
-    "notice": "Welcome to Sports. Enjoy high-quality live streaming!"
-  },
-  "matches": [
-    {
-      "id": "match_01",
-      "leagueTitle": "UEFA Champions League",
-      "leagueLogo": "https://i.ibb.co/L8P4rXy/ucl.png",
-      "team1Name": "Real Madrid",
-      "team1Logo": "https://i.ibb.co/hZ1LqG3/real-madrid.png",
-      "team2Name": "Man City",
-      "team2Logo": "https://i.ibb.co/jR0Y5T6/man-city.png",
-      "matchTime": "2026-04-21T21:00:00",
-      "matchEndTime": "2026-04-21T23:30:00",
-      "streamLinks": [
-        { "name": "Server 1 (HD)", "link": "https://test-streams.mux.dev/x36xhzz/url_8/1473044415_1.m3u8" },
-        { "name": "Server 2 (SD)", "link": "https://test-streams.mux.dev/x36xhzz/url_8/1473044415_1.m3u8" }
-      ],
-      "broadcasters": [
-        { "name": "Sony Ten 1 HD" },
-        { "name": "BT Sport 1" }
-      ]
-    }
-  ]
+    "playlist_info": {
+        "name": "Bingstream Auto Update Playlist",
+        "telegram": "https://t.me/livesportsplay",
+        "owner": "Md Sohanur Rahman Hady",
+        "last_update_time": "8:16:31 PM 21-04-2026"
+    },
+    "channels": [
+        {
+            "Category": "LIVE EVENT",
+            "League": "Intro",
+            "Team 1 Name": "Bingstream",
+            "Team 2 Name": "Intro",
+            "Team 1 Logo": "https://github.com/srhady/Hady/raw/refs/heads/main/1773124095740.png",
+            "Team 2 Logo": "https://github.com/srhady/Hady/raw/refs/heads/main/1773124095740.png",
+            "Match Title": "Intro",
+            "Match Poster": "https://github.com/srhady/Hady/raw/refs/heads/main/1773124095740.png",
+            "Match Status": "Live",
+            "Start Time": "Always",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": "https://github.com/srhady/Hady/raw/refs/heads/main/video_20260310_131739_edit.mp4"
+        },
+        {
+            "Category": "Auto Racing",
+            "League": "Auto Racing",
+            "Team 1 Name": "",
+            "Team 2 Name": "",
+            "Team 1 Logo": "",
+            "Team 2 Logo": "",
+            "Match Title": "Auto racing channel | Auto Racing [Server 1]",
+            "Match Poster": "https://placehold.co/800x450/ffffff/000000.png?text=Auto%20racing%20channel%0AAuto%20Racing&font=Oswald",
+            "Match Status": "Live",
+            "Start Time": "Live Now",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": "https://livecdn-bp-iptv.linewgen.xyz/live_abr/239_hd/index.m3u8?is_vip=false&token=8719e531b574c0c094941ee17a5bbbdd24a63289&x-sign=cfb4b172777342d08d246f6c80c18876&x-time=1776780960"
+        },
+        {
+            "Category": "Football channel",
+            "League": "Football channel",
+            "Team 1 Name": "",
+            "Team 2 Name": "",
+            "Team 1 Logo": "",
+            "Team 2 Logo": "",
+            "Match Title": "Football channel | Football channel [Server 1]",
+            "Match Poster": "https://placehold.co/800x450/ffffff/000000.png?text=Football%20channel%0AFootball%20channel&font=Oswald",
+            "Match Status": "Live",
+            "Start Time": "Live Now",
+            "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "Referer": "https://api2.ifnewgen.xyz/",
+            "Stream URL": "https://livecdn-bp-iptv.linewgen.xyz/live_abr/372_hd/index.m3u8?is_vip=false&token=8719e531b574c0c094941ee17a5bbbdd24a63289&x-sign=8f6fc51b7a35b4ff6a20de9128f7374a&x-time=1776780960"
+      }
+    ]
 }
