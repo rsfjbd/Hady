@@ -34,7 +34,7 @@
             "Start Time": "Live Now",
             "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
             "Referer": "https://api2.ifnewgen.xyz/",
-            "Stream URL": "https://flussonic.defineatoz.com/TSports2/tracks-v1/mono.m3u8?remote=103.111.225.183&token=03edfd0515a6753cc65d55ce8638f39b5c7303db-1d7a647eebe412a4d8f7ad50f67729ca-1776413314-1776402514"
+            "Stream URL": "http://180.94.28.28:8097/T-Sports/preview.mp4?token=a875b93e621271d4a2b05ca1469d4996bc0d55d6-671a49afdcb1bb33bae5927c3a27b173-1776748374-1776744774"
         }
     ]
 }
