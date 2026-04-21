@@ -22,19 +22,19 @@
             "Stream URL": "https://github.com/srhady/Hady/raw/refs/heads/main/video_20260310_131739_edit.mp4"
         },
         {
-            "Category": "Auto Racing",
-            "League": "Cricket",
+            "Category": "Cricket",
+            "League": "Ban vs New Live",
             "Team 1 Name": "BAN",
             "Team 2 Name": "NEW",
             "Team 1 Logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwLdD-y7gCNzQOcnMOmd18TEIW0fTvxMiqMEjTaquNQM_Q2ypHaz5hFYgH&s=10",
             "Team 2 Logo": "https://img.freepik.com/premium-vector/new-zealand-waving-flag-illustrator-national-icon_1082479-33409.jpg?semt=ais_hybrid&w=740&q=80",
-            "Match Title": "Auto racing channel | Auto Racing [Server 1]",
+            "Match Title": "Live Cricket channel | T Sports [Server 1]",
             "Match Poster": "https://placehold.co/800x450/ffffff/000000.png?text=Auto%20racing%20channel%0AAuto%20Racing&font=Oswald",
             "Match Status": "Live",
             "Start Time": "Live Now",
             "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
             "Referer": "https://api2.ifnewgen.xyz/",
-            "Stream URL": "https://livecdn-bp-iptv.linewgen.xyz/live_abr/239_hd/index.m3u8?is_vip=false&token=f6cd7658616c7e8f7f0caf7c97ca9584948d6adf&x-sign=1ab01e73217970358ac230de923ad7b0&x-time=1776736860"
+            "Stream URL": "https://flussonic.defineatoz.com/TSports2/tracks-v1/mono.m3u8?remote=103.111.225.183&token=03edfd0515a6753cc65d55ce8638f39b5c7303db-1d7a647eebe412a4d8f7ad50f67729ca-1776413314-1776402514"
         }
     ]
 }
